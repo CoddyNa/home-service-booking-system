@@ -2,6 +2,7 @@ services:
   - type: web
     name: homewise-api
     runtime: node
+    plan: free
     rootDir: apps/api
     buildCommand: npm ci
     startCommand: npm start
