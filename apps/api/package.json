@@ -1,0 +1,46 @@
+{
+  "name": "secure-auth-api",
+  "version": "0.1.0",
+  "main": "src/server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "setup:secrets": "node scripts/setup-secrets.js",
+    "setup:local-db": "powershell -ExecutionPolicy Bypass -File scripts/setup-local-db.ps1",
+    "migrate": "node scripts/run-migrations.js",
+    "migrate:local": "node scripts/run-migrations.js local",
+    "migrate:supabase": "node scripts/run-migrations.js supabase",
+    "admin:promote": "node scripts/promote-admin.js",
+    "seed:demo": "node scripts/seed-demo.js",
+    "seed:demo:supabase": "node scripts/seed-demo-supabase.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1152.0",
+    "@aws-sdk/lib-storage": "^3.1152.0",
+    "argon2": "^0.31.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.2.0",
+    "express-session": "^1.17.3",
+    "helmet": "^7.0.0",
+    "nodemailer": "^10.1.2",
+    "otplib": "^12.0.1",
+    "pg": "^8.11.3",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2",
+    "nodemon": "^3.1.14",
+    "pg-mem": "^2.6.0",
+    "supertest": "^6.3.4"
+  },
+  "overrides": {
+    "tar": "^7.5.21"
+  },
+  "allowScripts": {
+    "argon2@0.31.2": true
+  }
+}

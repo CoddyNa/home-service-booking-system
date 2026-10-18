@@ -1,0 +1,7 @@
+@font-face { font-family: 'Creato Display'; src: url('/fonts/CreatoDisplay-Regular.otf') format('opentype'); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Creato Display'; src: url('/fonts/CreatoDisplay-Bold.otf') format('opentype'); font-style: normal; font-weight: 600 900; font-display: swap; }
+:root { font-family: 'Creato Display', system-ui, sans-serif; font-size: 17px; font-synthesis: none; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+* { box-sizing: border-box; }
+html, body, #root { min-width: 320px; min-height: 100%; margin: 0; }
+body { min-height: 100vh; }
+button, input, select { font: inherit; }

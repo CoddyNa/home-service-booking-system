@@ -1,0 +1,71 @@
+services:
+  - type: web
+    name: homewise-api
+    runtime: node
+    rootDir: apps/api
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_HOST
+        sync: false
+      - key: DATABASE_PORT
+        value: "5432"
+      - key: DATABASE_NAME
+        value: postgres
+      - key: DATABASE_USER
+        sync: false
+      - key: DATABASE_PASSWORD
+        sync: false
+      - key: DATABASE_SSL
+        value: "true"
+      - key: PGSSLROOTCERT
+        value: supabase-root-ca.crt
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: PASSWORD_PEPPER
+        sync: false
+      - key: BACKUP_ENCRYPTION_KEY
+        sync: false
+      - key: AWS_REGION
+        value: us-east-1
+      - key: AWS_S3_BUCKET
+        sync: false
+      - key: AWS_S3_PREFIX
+        value: loginauth
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: AWS_SESSION_TOKEN
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: APP_BASE_URL
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_SECURE
+        value: "false"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: MAIL_FROM
+        sync: false
+      - key: RECOVERY_DATABASE_HOST
+        sync: false
+      - key: RECOVERY_DATABASE_PORT
+        value: "5432"
+      - key: RECOVERY_DATABASE_NAME
+        sync: false
+      - key: RECOVERY_DATABASE_USER
+        sync: false
+      - key: RECOVERY_DATABASE_PASSWORD
+        sync: false
+      - key: RECOVERY_DATABASE_SSL
+        value: "true"

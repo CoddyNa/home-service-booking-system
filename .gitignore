@@ -1,0 +1,13 @@
+# Local credentials and secrets
+**/.env
+**/.env.local
+**/.env.*.local
+!.env.example
+
+# Installed dependencies and generated build output
+**/node_modules/
+**/dist/
+**/.vercel/
+**/backups/
+coverage/
+*.log
